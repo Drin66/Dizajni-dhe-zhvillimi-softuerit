@@ -1,28 +1,110 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import Users from './components/Users';
-import Categories from './components/Categories';
-import Movies from './components/Movies';
-import Tickets from './components/Tickets';
-import Events from './components/Events';
+import Users from './components/Users.js';
+import Categories from './components/Categories.js';
+import Movies from './components/Movies.js';
+import Tickets from './components/Tickets.js';
+import Events from './components/Events.js';
+import Halls from './components/Halls.js';
+import Location from './components/Location.js';
+import Announcements from './components/Announcements.js';
+import Sidebar from './components/Sidebar.jsx';
+import Dashboard from './pages/Dashboard.jsx';
+import User from './pages/User.jsx';
+import Events from './pages/Events.jsx';
+import Movies from './pages/Movies.jsx';
+import Product from './pages/Product.jsx';
+import TicketsList from './pages/TicketsList.jsx';
+import Signup from './pages/Signup.jsx';
+import Update from './pages/Update.jsx';
+import Category from './pages/Category.jsx';
+import UpdateCategory from './pages/UpdateCategory.jsx';
+import AddCategory from './pages/AddCategory.jsx';
+import AddMovie from './pages/AddMovie.jsx';
+import UpdateMovie from './pages/UpdateMovie.jsx';
+import AddEvent from './pages/AddEvent.jsx';
+import UpdateEvent from './pages/UpdateEvent.jsx';
+import Halls from './pages/Halls.jsx';
+import Announcments from './pages/Announcments.jsx';
+import Login from './pages/Login.jsx';
+import AddAnnouncment from './pages/AddAnnouncment.jsx';
+import UpdateAnnouncment from './pages/UpdateAnnouncment.jsx';
+import AddHall from './pages/AddHall.jsx';
+import UpdateHall from './pages/UpdateHall.jsx';
+import AddTicket from './pages/AddTicket.jsx';
+import UpdateTicket from './pages/UpdateTicket.jsx';
+import Location from './pages/Location.jsx';
+import AddLocation from './pages/AddLocation.jsx';
+import UpdateLocation from './pages/UpdateLocation.jsx';
+import Logout from './pages/Logout.jsx';
+import AnnouncmentsU from './pages/AnnouncmentsU.jsx';
+import LocationU from './pages/LocationU.jsx';
+import EventsU from './pages/EventsU.jsx';
+import MoviesU from './pages/MoviesU.jsx';
 
 const App = () => {
     return (
         <Router>
             <div className="app">
-                <Routes>
-                    <Route path="/" element={<Dashboard />} />
-                    <Route path="/users" element={<Users />} />
-                    <Route path="/categories" element={<Categories />} />
-                    <Route path="/movies" element={<Movies />} />
-                    <Route path="/tickets" element={<Tickets />} />
-                    <Route path="/events" element={<Events />} />
-                </Routes>
+                <Sidebar>
+                    <Routes>
+                        <Route path="/" element={<Dashboard />} />
+                        <Route path="/users" element={<Users />} />
+                        <Route path="/categories" element={<Categories />} />
+                        <Route path="/movies" element={<Movies />} />
+                        <Route path="/tickets" element={<Tickets />} />
+                        <Route path="/events" element={<Events />} />
+                        <Route path="/halls" element={<Halls />} />
+                        <Route path="/locationn" element={<Location />} />
+                        <Route path="/announcements" element={<Announcements />} />
+                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="/user" element={<User />} />
+                        <Route path="/movies" element={<Movies />} />
+                        <Route path="/events" element={<Events />} />
+                        <Route path="/product" element={<Product />} />
+                        <Route path="/ticketsList" element={<TicketsList />} />
+                        <Route path="/signup" element={<Signup />} />
+                        <Route path="/update/:id" element={<Update />} />
+                        <Route path="/category" element={<Category />} />
+                        <Route path="/updateCategory/:id" element={<UpdateCategory />} />
+                        <Route path="/addcategory" element={<AddCategory />} />
+                        <Route path="/addmovie" element={<AddMovie />} />
+                        <Route path="/updatemovie/:id" element={<UpdateMovie />} />
+                        <Route path="/addevent" element={<AddEvent />} />
+                        <Route path="/updateEvent/:id" element={<UpdateEvent />} />
+                        <Route path="/halls" element={<Halls />} />
+                        <Route path="/announcments" element={<Announcments />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/logout" element={<Logout />} />
+                        <Route path="/addannouncment" element={<AddAnnouncment />} />
+                        <Route path="/updateannouncment/:id" element={<UpdateAnnouncment />} />
+                        <Route path="/addhall" element={<AddHall />} />
+                        <Route path="/updatehall/:id" element={<UpdateHall />} />
+                        <Route path="/addticket" element={<AddTicket />} />
+                        <Route path="/updateticket/:id" element={<UpdateTicket />} />
+                        <Route path="/location" element={<Location />} />
+                        <Route path="/addlocation" element={<AddLocation />} />
+                        <Route path="/updateLocation/:id" element={<UpdateLocation />} />
+                        <Route path="/announcmentsU" element={<AnnouncmentsU />} />
+                        <Route path="/locationU" element={<LocationU />} />
+                        <Route path="/eventsU" element={<EventsU />} />
+                        <Route path="/moviesU" element={<MoviesU />} />
+                    </Routes>
+                </Sidebar>
             </div>
         </Router>
     );
 };
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+      <App />
+  </React.StrictMode>
+);
 
 export default App;
 
